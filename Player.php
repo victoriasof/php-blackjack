@@ -13,4 +13,13 @@ class Player {
     public function getScore(){}
     public function hasLost(){}
 
+//In the constructor of the Player class; Make it require the Deck object.
+//Pass this Deck from the Blackjack constructor.
+//Now draw 2 cards for the player. You have to use existing code for this from the Deck class.
+
+    public function __construct($deck){}
+
+
+
+
 }
