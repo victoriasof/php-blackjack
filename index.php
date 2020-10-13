@@ -30,6 +30,7 @@ require 'Player.php';
 //require 'Card.php';
 //require 'Deck.php';
 
+const BLACKJACK = 21;
 
 //Save the instance of the entire Blackjack object in the session (you're gonna need it)
 $_SESSION['blackjack'] = new Blackjack();
@@ -55,6 +56,7 @@ elseif($_POST["action"]=== "surrender"){
     $player->hasLost(); //Tim
 }
 
+//Use the class' methods to react to these actions.
 
 ?>
 
@@ -66,21 +68,5 @@ elseif($_POST["action"]=== "surrender"){
     <input type="submit" name="action" value="surrender">
 </form>
 
-//made buttons
+<!-- made buttons -->
 
-//Use the class' methods to react to these actions.
-
-//hit should add a card to the player.
-//If this brings him above 21, set lost property to true.
-
-
-
-
-//surrender should make you surrender the game. (Dealer wins.)
-//This sets the property lost in the player instance to true.
-
-//getScore loops over all the cards and return the total value of that player.
-
-//stand does not have a method in the player class but will instead call hit on the dealer instance.
-
-//hasLost will return the bool of the lost property.
