@@ -17,9 +17,13 @@ class Player {
 //Pass this Deck from the Blackjack constructor.
 //Now draw 2 cards for the player. You have to use existing code for this from the Deck class.
 
-    public function __construct($deck){}
+    public function __construct(Deck $deck){
 
 
+        $this->cards[] = $deck->drawCard();
+        $this->cards[] = $deck->drawCard();
+
+    }
 
 
 }

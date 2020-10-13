@@ -23,3 +23,12 @@ function whatIsHappening()
 }
 
 whatIsHappening(); // call function
+
+require 'Blackjack.php';
+require 'Player.php';
+//require 'Suit.php';
+//require 'Card.php';
+//require 'Deck.php';
+
+//Save the instance of the entire Blackjack object in the session (you're gonna need it)
+$_SESSION['Blackjack'] = new Blackjack();

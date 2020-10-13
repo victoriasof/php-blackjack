@@ -4,6 +4,12 @@
 //Add 3 private properties: player, dealer, deck
 //Add the following public methods: getPlayer, getDealer
 
+require 'Deck.php';
+require 'Suit.php';
+require 'Card.php';
+//linked files
+
+
 class Blackjack {
 
     private $player;
@@ -15,25 +21,26 @@ class Blackjack {
 
     public function __construct(){
 
+        //Create a new deck object (code has already been written for you!).
+        //Shuffle the cards with shuffle method on deck.
+
+        $deck = new Deck();
+        $deck->shuffle();
+
+        foreach($deck->getCards() AS $card) {
+            echo $card->getUnicodeCharacter(true);
+            echo '<br>';
+
+        }
+
         //In the constructor do the following:
         //Instantiate the Player class twice, insert it into the player property and a dealer property.
 
-        $this -> player = new Player;
-        $this -> dealer = new Player;
+        $this -> player = new Player($deck);
+        $this -> dealer = new Player($deck);
 
-        //Create a new deck object (code has already been written for you!).
-        $this -> deck = new Deck;
+        //changed order 
 
-        //Shuffle the cards with shuffle method on deck.
-        $this -> deck = shuffle($this->cards);
-        
     }
-
-
-
-
-
-
-
 
 }
