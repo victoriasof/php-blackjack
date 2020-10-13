@@ -16,12 +16,16 @@ class Blackjack {
     private $dealer;
     private $deck;
 
-    public function getPlayer(){}
-    public function getDealer(){}
+    public function getPlayer(){
+        return $this->player; //Tim
+    }
+    public function getDealer(){
+        return $this->dealer; //Tim
+    }
 
     public function __construct(){
 
-        //Create a new deck object (code has already been written for you!).
+        //Create a new deck object (code in example.php).
         //Shuffle the cards with shuffle method on deck.
 
         $deck = new Deck();

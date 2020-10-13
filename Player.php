@@ -19,6 +19,7 @@ class Player {
 
     public function __construct(Deck $deck){
 
+        //Time made empty array first and then pushed
 
         $this->cards[] = $deck->drawCard();
         $this->cards[] = $deck->drawCard();
