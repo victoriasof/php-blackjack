@@ -39,7 +39,7 @@ class Blackjack {
         $this -> player = new Player($deck);
         $this -> dealer = new Player($deck);
 
-        //changed order 
+        //changed order
 
     }
 

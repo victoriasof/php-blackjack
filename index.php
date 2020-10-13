@@ -22,7 +22,7 @@ function whatIsHappening()
     var_dump($_SESSION);
 }
 
-whatIsHappening(); // call function
+
 
 require 'Blackjack.php';
 require 'Player.php';
@@ -30,5 +30,41 @@ require 'Player.php';
 //require 'Card.php';
 //require 'Deck.php';
 
+
 //Save the instance of the entire Blackjack object in the session (you're gonna need it)
-$_SESSION['Blackjack'] = new Blackjack();
+$_SESSION['blackjack'] = new Blackjack();
+
+//Use forms to send to the index.php page what the player's action is. (i.e. hit/stand/surrender)
+
+
+
+whatIsHappening(); // call function
+
+
+
+?>
+
+<!doctype html>
+
+<form action="index.php" method="post">
+    <input type="submit" name="action" value="hit">
+    <input type="submit" name="action" value="stand">
+    <input type="submit" name="action" value="surrender">
+</form>
+
+//made buttons 
+
+
+//Use the class' methods to react to these actions.
+
+//hit should add a card to the player.
+//If this brings him above 21, set lost property to true.
+
+//surrender should make you surrender the game. (Dealer wins.)
+//This sets the property lost in the player instance to true.
+
+//getScore loops over all the cards and return the total value of that player.
+
+//stand does not have a method in the player class but will instead call hit on the dealer instance.
+
+//hasLost will return the bool of the lost property.
