@@ -100,3 +100,14 @@ elseif($_POST["action"]=== "surrender"){
     }
     ?>
 </div>
+
+<div>
+    <?php
+    if ($dealer->hasLost()){
+        echo "Dealer loses";
+    }
+    else if ($player->hasLost()){
+        echo "Player loses";
+    }
+    ?>
+</div>
