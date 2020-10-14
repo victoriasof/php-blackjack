@@ -66,7 +66,7 @@ class Player {
     //hasLost will return the bool of the lost property.
     public function hasLost(){
 
-        //return $this->lost;
+        return $this->lost;
 
     }
 

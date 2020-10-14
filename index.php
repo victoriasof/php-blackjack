@@ -38,8 +38,8 @@ require 'Player.php';
     $_SESSION['blackjack'] = new Blackjack();
 //}
 
-//$player = $_SESSION["blackjack"]->getPlayer();
-//$dealer = $_SESSION["blackjack"]->getDealer();
+$player = $_SESSION["blackjack"]->getPlayer();
+$dealer = $_SESSION["blackjack"]->getDealer();
 
 
 
@@ -54,7 +54,7 @@ elseif($_POST["action"]=== "stand"){
 }
 elseif($_POST["action"]=== "surrender"){
     echo "player surrender";
-    //$_SESSION["blackjack"]->getPlayer();
+    $_SESSION["blackjack"]->getPlayer();
     //$player->hasLost(); //Tim
 }
 
