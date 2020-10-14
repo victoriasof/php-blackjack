@@ -15,9 +15,9 @@ class Player {
 
     public function __construct(Deck $deck){
 
-        for($i=0; $i<2; $i++){
-            $this->card[]=$deck->drawCard();
-        }
+        //for($i=0; $i<2; $i++){
+            //$this->card[]=$deck->drawCard();
+        //}
 
         //Tim made empty array first and then pushed
 
@@ -32,11 +32,11 @@ class Player {
     public function hit(){
         //hit should add a card to the player. If this brings him above 21, set lost property to true.
 
-        $this->cards[] = $this->deck->drawCard();
+        //$this->cards[] = $this->deck->drawCard();
 
-        if($this->getScore()>21){
-            $this->lost=true;
-        }
+        //if($this->getScore()>21){
+            //$this->lost=true;
+        //}
 
     }
 
@@ -44,20 +44,20 @@ class Player {
         //surrender should make you surrender the game. (Dealer wins.)
         //This sets the property lost in the player instance to true.
 
-        $this->lost= true;
+        //$this->lost= true;
 
     }
 
     public function getScore(){
         //getScore loops over all the cards and return the total value of that player.
 
-        $playerScore = 0;
-        $cards = $this->cards;
+        //$playerScore = 0;
+        //$cards = $this->cards;
 
-        foreach ($cards as $card){
-            $playerScore += $card->getValue();
-        }
-        return $playerScore;
+        //foreach ($cards as $card){
+            //$playerScore += $card->getValue();
+        //}
+        //return $playerScore;
     }
 
     //stand does not have a method in the player class but will instead call hit on the dealer instance.
@@ -66,14 +66,11 @@ class Player {
     //hasLost will return the bool of the lost property.
     public function hasLost(){
 
-        return $this->lost;
+        //return $this->lost;
 
     }
 
 }
-
-
-
 
 
 

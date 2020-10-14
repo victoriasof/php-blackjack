@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e75f6673-c408-4e4a-92c4-2e0057a98958" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blackjack.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blackjack.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/Player.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
@@ -34,6 +35,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="php-blackjack.local" id="d7019775-cab0-4870-87ca-0144a5221d80" name="php-blackjack.local" />
+    </servers>
   </component>
   <component name="ProjectId" id="1imFmF67eszuohp0sAP3kYePNDb" />
   <component name="ProjectLevelVcsManager">
@@ -62,7 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602505018067</updated>
       <workItem from="1602505019855" duration="7117000" />
-      <workItem from="1602571122288" duration="20333000" />
+      <workItem from="1602571122288" duration="21528000" />
+      <workItem from="1602659644801" duration="987000" />
     </task>
     <servers />
   </component>
@@ -93,9 +101,9 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog/67.27.1299.741@67.27.1299.741" timestamp="1602510300081" />
-    <state x="205" y="31" key="SettingsEditor" timestamp="1602511234523">
+    <state x="205" y="31" key="SettingsEditor" timestamp="1602660308046">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1602511234523" />
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1602660308046" />
   </component>
 </project>

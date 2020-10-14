@@ -30,15 +30,17 @@ require 'Player.php';
 //require 'Card.php';
 //require 'Deck.php';
 
-const BLACKJACK = 21;
+//const BLACKJACK = 21;
 
 //Save the instance of the entire Blackjack object in the session (you're gonna need it)
-$_SESSION['blackjack'] = new Blackjack();
 
-$player = $_SESSION["blackjack"]->getPlayer();
-$player = $_SESSION["blackjack"]->getDealer();
+//if(!isset($_SESSION["blackjack"])){ //if session doesn't exist yet, make it
+    $_SESSION['blackjack'] = new Blackjack();
+//}
 
-//Use forms to send to the index.php page what the player's action is. (i.e. hit/stand/surrender)
+//$player = $_SESSION["blackjack"]->getPlayer();
+//$dealer = $_SESSION["blackjack"]->getDealer();
+
 
 
 if (isset($_POST["action"])){
@@ -51,10 +53,13 @@ elseif($_POST["action"]=== "stand"){
     echo "player stand";
 }
 elseif($_POST["action"]=== "surrender"){
-    //echo "player surrender";
+    echo "player surrender";
     //$_SESSION["blackjack"]->getPlayer();
-    $player->hasLost(); //Tim
+    //$player->hasLost(); //Tim
 }
+
+
+//Use forms to send to the index.php page what the player's action is. (i.e. hit/stand/surrender)
 
 //Use the class' methods to react to these actions.
 

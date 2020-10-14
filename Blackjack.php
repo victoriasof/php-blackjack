@@ -17,10 +17,10 @@ class Blackjack {
     private $deck;
 
     public function getPlayer(){
-        return $this->player; //Tim
+        //return $this->player; //Tim
     }
     public function getDealer(){
-        return $this->dealer; //Tim
+        //return $this->dealer; //Tim
     }
 
     public function __construct(){
