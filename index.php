@@ -34,13 +34,13 @@ require 'Player.php';
 
 //Save the instance of the entire Blackjack object in the session (you're gonna need it)
 
-//if(!isset($_SESSION["blackjack"])){ //if session doesn't exist yet, make it
+//if(!isset($_SESSION["blackjack"])){ //if session doesn't exist yet, make it (BUT THIS CAUSES ERROR)
     $_SESSION['blackjack'] = new Blackjack();
 //}
 
+
 $player = $_SESSION["blackjack"]->getPlayer();
 $dealer = $_SESSION["blackjack"]->getDealer();
-
 
 
 if (isset($_POST["action"])){
@@ -48,14 +48,17 @@ if (isset($_POST["action"])){
 }
 elseif($_POST["action"]=== "hit"){
     echo "player hit";
+
+    //$player->hit($blackjack->getDeck()); //undefined variable $blackjack
+
 }
 elseif($_POST["action"]=== "stand"){
     echo "player stand";
 }
 elseif($_POST["action"]=== "surrender"){
-    echo "player surrender";
-    $_SESSION["blackjack"]->getPlayer();
-    //$player->hasLost(); //Tim
+    //echo "player surrender";
+    //$_SESSION["blackjack"]->getPlayer();
+    $player->hasLost(); //Tim
 }
 
 
@@ -67,11 +70,33 @@ elseif($_POST["action"]=== "surrender"){
 
 <!doctype html>
 
+<div>Player score: <?php echo $player->getScore()?></div>
+<div>Dealer score: <?php echo $dealer->getScore()?></div>
+
 <form action="index.php" method="post">
+
     <input type="submit" name="action" value="hit">
     <input type="submit" name="action" value="stand">
     <input type="submit" name="action" value="surrender">
+
 </form>
 
 <!-- made buttons -->
 
+<div>
+  Player cards:
+    <?php
+    foreach($player->getCards() as $card){
+        echo $card->getUnicodeCharacter(true);
+    }
+    ?>
+</div>
+
+<div>
+    Dealer cards:
+    <?php
+    foreach($dealer->getCards() as $card){
+        echo $card->getUnicodeCharacter(true);
+    }
+    ?>
+</div>

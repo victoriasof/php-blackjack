@@ -26,6 +26,11 @@ class Player {
 
     }
 
+    public function getCards(): array
+    {
+        return $this->cards;
+    }
+
     //Add a couple of empty public methods to this class: hit, surrender, getScore, hasLost
 
 

@@ -12,15 +12,15 @@ require 'Card.php';
 
 class Blackjack {
 
-    private $player;
-    private $dealer;
-    private $deck;
+    private Player $player;
+    private Player $dealer;
+    private Deck $deck;
 
     public function getPlayer(){
-        //return $this->player; //Tim
+        return $this->player; //Tim
     }
     public function getDealer(){
-        //return $this->dealer; //Tim
+        return $this->dealer; //Tim
     }
 
     public function __construct(){
