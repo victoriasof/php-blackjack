@@ -77,6 +77,25 @@ class Player {
 
 }
 
+//extend the player class and extend it to a newly created dealer class.
+//Change the Blackjack class to create a new dealer object instead of a player object for the property of the dealer.
+
+//Now create a hit function that keeps drawing cards until the dealer has at least 15 points.
+//The tricky part is that we also need the lost check we already had in the hit function of the player.
+
+class Dealer extends Player {
+
+    public function hit(Deck $deck){
+
+        if($this->getScore()<15){
+
+            do {
+                parent::hit($deck);
+            }
+            while ($this->getScore()<15);
+        }
+    }
+}
 
 
 
